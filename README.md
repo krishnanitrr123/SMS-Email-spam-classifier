@@ -1,21 +1,23 @@
-🔍 Overview-
+**Overview-**
 
 The objective of this project is to build an efficient text classification model that detects whether an incoming SMS or email message is Spam or Not Spam.
 This helps prevent phishing, scams, and unwanted advertisements.
 
-📂 Dataset-
+**Dataset-**
 
-Source: SMS Spam Collection Dataset
+Source: SMS Spam Collection Dataset(Kaggle)
 
 Size: 5,572 rows and 5 columns
 
-🛠 Tools-
+**Tools-**
 
 Language: Python
 
 Libraries: pandas, numpy, nltk, scikit-learn, matplotlib, seaborn
 
-Model: Multinomial Naive Bayes
+Model: Multinomial Naive Bayes,	KNN, SVC,	Random Forest, Gradient Boosting, xgboost, Linear Regression, Extra Tree Classifier,	AdaBoost, Bagging Classifier ,Decision Tree
+
+Best Model- Multinomial Naive Bayes
 
 Vectorization: TF-IDF
 
@@ -24,48 +26,85 @@ Deployment: Streamlit
 Serialization: Pickle
 
 
-📊 Project Workflow-
+**📊 Project Workflow-**
 
 1)Data Cleaning
 
-Removed unnecessary columns
+-Removed unnecessary columns
 
-Renamed columns (v1 → target, v2 → text)
+-Renamed columns (v1 → target, v2 → text)
 
-Encoded labels (ham = 0, spam = 1)
+-Encoded labels (ham = 0, spam = 1)
 
-Removed duplicates
+-Removed duplicates
 
 2)Exploratory Data Analysis (EDA)
 
-Distribution of spam vs ham
+-Distribution of spam vs ham
 
-Message length analysis
+-Message length analysis
 
-Word and character frequency
+-Word and character frequency
 
 3)Text Preprocessing
 
-Lowercasing
+-Lowercasing
 
-Tokenization
+-Tokenization
 
-Removing stopwords & punctuation
+-Removing stopwords & punctuation
 
-Stemming using Porter Stemmer
+-Stemming using Porter Stemmer
 
 4)Feature Extraction
 
-TF-IDF Vectorization (max_features = 3000)
+-TF-IDF Vectorization (max_features = 3000)
 
 5)Model Building
 
-Multinomial Naive Bayes
+-Multinomial Naive Bayes
 
 Model Evaluation
 
-Accuracy, Precision, Recall, F1-score
+-Accuracy, Precision, Recall, F1-score
 
 6)Deployment
 
 Streamlit app
+
+**Exploratory Data Analysis (EDA)-**
+
+Spam messages are much fewer compared to ham.
+
+Spam messages tend to be longer and contain more words.
+
+Generated WordCloud for spam and ham messages.
+
+Analyzed top 30 frequent words in both classes.
+
+**Text Preprocessing-**
+
+Example of preprocessing pipeline:
+
+1. Convert to lowercase
+2. Tokenize
+3. Remove special characters
+4. Remove stopwords
+5. Remove punctuation
+6. Apply stemming
+
+
+**Model Building-**
+
+Algorithm: Multinomial Naive Bayes(Best fitted model)
+
+Features: TF-IDF Vectorization (Top 3000 features)
+
+Train-Test Split: 80:20
+
+**Model Evaluation-**
+
+Accuracy: ~97%
+
+Precision: ~100% for Spam detection
+
